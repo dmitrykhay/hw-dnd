@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+}
+
+.trello {
+  height: calc(100vh - 30px);
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  align-items: start;
+  padding: 15px;
+  gap: 15px;
+  background-color: #388bff;
+}
+
+.trello-list {
+  box-sizing: border-box;
+  width: 300px;
+  min-width: 300px;
+  background-color: #eeeeee;
+  border-radius: 10px;
+}
+
+.list-header {
+  display: flex;
+  width: 100%;
+  padding: 10px 0 0 10px;
+  height: fit-content;
+  min-height: 40px;
+}
+
+.list-header h2 {
+  width: 80%;
+  margin: 0;
+  font-size: 14px;
+  padding-left: 6px;
+  align-self: center;
+  overflow-wrap: anywhere;
+}
+
+.list-header textarea {
+  font-size: 14px;
+  font-weight: bolder;
+  box-sizing: border-box;
+  padding-left: 5px;
+  width: 80%;
+  vertical-align: top;
+  resize: none;
+  overflow-wrap: break-word;
+  height: auto;
+  align-self: center;
+  overflow: hidden;
+}
+
+.noshow {
+  display: none;
+}
+
+.cards-room {
+  display: flex;
+  padding: 0 10px;
+  gap: 10px;
+  flex-flow: wrap;
+}
+
+.card,
+.list-card textarea,
+#dragMarker {
+  width: 280px;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 3px 3px 3px #dddddd;
+}
+
+.card {
+  box-sizing: border-box;
+}
+
+#dragMarker {
+  background-color: darkgrey;
+  box-shadow: unset;
+}
+
+.open-card-composer {
+  text-decoration: none;
+  color: black;
+}
+
+.card-composer-container {
+  display: flex;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+}
+
+.list-card {
+  padding: 10px 10px 0;
+}
+
+.list-card textarea {
+  box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 5px;
+  outline: none;
+  border: none;
+}
+
+.cc-controls-section {
+  padding: 10px 10px 0;
+  margin-bottom: -5px;
+}
+
+.finish-add-card-btn button {
+  border: 0;
+  color: white;
+  background-color: #000088;
+  font-style: inherit;
+  font-size: 1rem;
+  padding: 10px;
+}
+
+.finish-add-card-btn .cancel-btn {
+  background-color: transparent;
+}
+
+.finish-add-card-btn .cancel-btn::before {
+  color: black;
+  content: " \2716 ";
+}
+
+.dragged {
+  width: 280px;
+  position: absolute;
+  box-shadow: unset;
+  cursor: grabbing;
+}
+
+.list-card-title {
+  overflow-wrap: break-word;
+}
+
+.list-card-details {
+  position: relative;
+}
+
+.card .cancel {
+  visibility: hidden;
+  top: -21px;
+  left: 255px;
+}
+
+.card .cancel::before {
+  position: absolute;
+  top: 0;
+  left: 255px;
+  visibility: hidden;
+  color: black;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #f7f7f7;
+  content: " \2716 ";
+}
+
+.card:hover .cancel::before {
+  visibility: visible;
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: #f7f7f7;
+}
+
+button {
+  cursor: pointer;
+}
